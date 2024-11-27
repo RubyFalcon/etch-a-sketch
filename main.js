@@ -24,8 +24,23 @@ function createDivs(n){
     }
     
 }
-
+// button functionality
 createDivs(16);
+const button = document.querySelector("button");
+button.addEventListener("click", ()=>{
+    let n = prompt("Please enter number between 1-100");
+    if (n > 100){
+        n = prompt("Number must be less than 100 and greater than 0")
+    }
+    // else if(!(typeof(n)=== "number")){
+    //     n = prompt("Input must be a number")
+    // }
+
+    else {
+        createDivs(n);
+    }
+})
+
 
 
 
