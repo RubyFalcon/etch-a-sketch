@@ -10,6 +10,7 @@ function createDivs(n){
     //16 is euqal to the flex gap(12 ) + the total border px (4)
     let axis = (960/n)-16;
     console.log(axis);
+    container.innerHTML = '';
 
     for (let i=0; i <(n**2); i++){
         let squaredDiv = document.createElement('div');
@@ -25,20 +26,18 @@ function createDivs(n){
     
 }
 // button functionality
+
 createDivs(16);
 const button = document.querySelector("button");
-button.addEventListener("click", ()=>{
+button.addEventListener("click", ()=> {
     let n = prompt("Please enter number between 1-100");
-    if (n > 100){
-        n = prompt("Number must be less than 100 and greater than 0")
+    while (n < 0 || n > 100 ){
+        n = prompt("Please enter number between 1-100") ;
     }
-    // else if(!(typeof(n)=== "number")){
-    //     n = prompt("Input must be a number")
-    // }
+    createDivs(n);
+    
 
-    else {
-        createDivs(n);
-    }
+    
 })
 
 
