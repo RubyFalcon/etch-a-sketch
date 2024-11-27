@@ -8,7 +8,7 @@ let n = 16
 
 function createDivs(n){
     //16 is euqal to the flex gap(12 ) + the total border px (4)
-    let axis = (960/n)-16;
+    let axis = (550/n);
     console.log(axis);
     container.innerHTML = '';
 
@@ -18,7 +18,7 @@ function createDivs(n){
         container.appendChild(squaredDiv);
         squaredDiv.setAttribute("style", `width: ${axis}px; height: ${axis}px`)
         squaredDiv.addEventListener("mouseover", ()=> {
-            squaredDiv.style.backgroundColor = "red";
+            squaredDiv.style.backgroundColor = "rgb(51,51,51)";
         }
         )
         
